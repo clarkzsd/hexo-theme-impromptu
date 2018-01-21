@@ -1,0 +1,14 @@
+@import './normalize.min.css';
+
+:root {
+  --mainColor: blue;
+}
+
+a {
+  color: var(--mainColor);
+}
+
+#bloger-header {
+  position: relative;
+  padding: 6em;
+}
