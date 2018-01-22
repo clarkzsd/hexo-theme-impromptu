@@ -1,13 +1,36 @@
-<header id="blog-header">
+<div class="author-info">
     <div class="inner">
-        <nav id="navigation">
-            navigation
-        </nav>
+        <a href="/" class="info-avatar">
+            <img src="<%- theme.avatar %>" alt="">
+        </a>
+        <div class="info-content">
+            <h1 class="author-name">
+                Sytone
+            </h1>
+            <h2 class="author-bio">
+                Web Developer
+            </h2>
+            <div class="author-social">
+                <% for (var key in theme.social) { %>
+                    <a href="<%= theme.social[key] %>">
+                        <i class="fa fa-<%= key %>" aria-hidden="true"></i>
+                    </a>
+                <% } %>
+            </div>
+        </div>
     </div>
-</header>
-
+</div>
 <div class="container">
-    <main class="content">
-        bbbb
+    <main class="post-list">
+        <% page.posts.each(function(post) { %>
+            <div class="post-item">
+                <h2 class="post-title">
+                    <%- post.title || "Untitled" %>
+                </h2>
+                <h3 class="post-description">
+                    <%- post.description || "" %>
+                </h3>
+            </div>
+        <% }) %>
     </main>
 </div>

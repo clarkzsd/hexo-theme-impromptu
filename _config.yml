@@ -1,5 +1,17 @@
 # Header
 menu:
-  首页: /
-  关于: /about
-  归档: /archives
+  Home: /
+  About: /about
+  Archives: /archives
+
+social:
+  twitter: https://twitter.com/
+  github: https://github.com/
+  instagram: https://twitter.com/
+  weibo: https://weibo.com/
+
+# Site favicon
+favicon: /favicon.png
+
+# Author avatar
+avatar: /avatar.png

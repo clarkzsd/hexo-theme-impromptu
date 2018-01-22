@@ -3,6 +3,26 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Blog</title>
+    <%
+        var title = page.title;
+        if (is_archive()){
+            title = __('archive_a');
+            if (is_month()){
+                title += ': ' + page.year + '/' + page.month;
+            } else if (is_year()){
+                title += ': ' + page.year;
+            }
+        } else if (is_tag()){
+            title = __('tag') + ': ' + page.tag;
+        }
+    %>
+    <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+    <% if (theme.favicon){ %>
+        <link rel="icon" href="<%- theme.favicon %>">
+    <% } %>
+
+
+    <!-- font-awosome -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <%- css('css/main.css') %>
 </head>
