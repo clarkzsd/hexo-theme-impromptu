@@ -23,14 +23,20 @@
 <div class="list-container">
     <main class="post-list">
         <% page.posts.each(function(post) { %>
-            <div class="post-item">
-                <h2 class="post-title">
-                    <%- post.title || "Untitled" %>
-                </h2>
-                <h3 class="post-description">
-                    <%- post.description || "" %>
-                </h3>
-            </div>
+            <%- partial('_partial/post-item', { post }) %>
         <% }) %>
     </main>
 </div>
+
+<ul class="pager">
+    <% if (page.prev){ %>
+        <li class="previous">
+            <a href="<%- config.root %><%- page.prev_link %>">&larr; Newer Posts</a>
+        </li>
+    <% } %>
+    <% if (page.next){ %>
+        <li class="next">
+            <a href="<%- config.root %><%- page.next_link %>">Older Posts &rarr;</a>
+        </li>
+    <% } %>
+</ul>

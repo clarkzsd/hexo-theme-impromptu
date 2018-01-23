@@ -24,7 +24,7 @@ a {
 }
 
 header {
-  padding: 50px;
+  padding: 60px;
   line-height: 1.32;
 
   & .blog-logo {
@@ -34,10 +34,20 @@ header {
   }
 }
 
+h1 {
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: 300;
+  color: var(--grey);
+  font-size: 22px;
+}
+
 .inner {
   max-width: 860px;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 60px;
   box-sizing: border-box;
 }
 
@@ -74,15 +84,11 @@ header {
   }
 
   & .author-name {
-    font-weight: 400;
     margin: 0;
   }
 
   & .author-bio {
     margin: 0 0 10px;
-    font-weight: 300;
-    color: var(--grey);
-    font-size: 22px;
   }
 
   & .author-social {
@@ -97,4 +103,27 @@ header {
 
 .list-container {
   border-top: 1px solid var(--grey-light);
+}
+
+.post-list {
+  display: flex;
+  flex-flow: row wrap;
+
+  & .post-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 20px 60px;
+
+    & .post-meta {
+      color: var(--grey);
+    }
+  }
+
+  & .post-item:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }  
 }
