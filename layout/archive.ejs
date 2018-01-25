@@ -1,0 +1,10 @@
+<div class="archive">
+  <div class="inner">
+    <section class="archive-block">
+      <% page.posts.each(function(post) { %>
+        <%- partial('_partial/post-item', { post }) %>
+      <% }) %>
+      <%- partial('_partial/pager', { page }) %>
+    </section>
+  </div>
+</div>
