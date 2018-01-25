@@ -1,0 +1,14 @@
+<header class="post-header">
+    <h1 class="post-title"><%= post.title %></h1>
+    <p class="post-meta">
+      <%= post.date.format(config.date_format) %>
+    </p>
+</header>
+
+<article class="post">
+  <div class="inner">
+    <section class="post-content">
+      <%- markdown(post.content) %>
+    </section>
+  </div>
+</article>
