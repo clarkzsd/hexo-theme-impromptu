@@ -3,7 +3,7 @@
 :root {
   --lightblack: #222;
   --blue: #3eb0ef;
-  --darkgrey: #15171A;
+  --darkgrey: #15171a;
   --midgrey: #738a94;
   --lightgrey: #c5d2d9;
   --whitegrey: #e5eff5;
@@ -304,7 +304,6 @@ th {
   padding: 0;
 }
 
-
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -319,13 +318,14 @@ html {
 body {
   overflow-x: hidden;
   color: color(var(--midgrey) l(-25%));
-  font-family: Roboto, Helvetica Neue, Helvetica, Aria, PingFang SC, Hiragino Sans GB, Droid Sans Fallback, Microsoft YaHei, sans-serif;
+  font-family: Roboto, Helvetica Neue, Helvetica, Aria, PingFang SC,
+    Hiragino Sans GB, Droid Sans Fallback, Microsoft YaHei, sans-serif;
   font-size: 1.5rem;
   line-height: 1.6em;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0;
-  text-rendering: optimizeLegibility;
+text-rendering: optimizeLegibility;
   background: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -434,7 +434,6 @@ blockquote small {
   font-size: 0.9em;
   opacity: 0.8;
 }
-
 
 /* Quotation marks */
 

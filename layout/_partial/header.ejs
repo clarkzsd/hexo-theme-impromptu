@@ -2,6 +2,9 @@
     <a href="/" class="blog-logo">
         <%= config.title %>
     </a>
+    <button class="header-bar-btn">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
     <nav class="header-nav nav-links">
         <% for (var i in theme.menu){ %>
             <a class="header-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
