@@ -1,16 +1,21 @@
 <footer>
     <div class="blog-footer">
-      <a href="/" class="blog-logo">
-          <%= config.title %>
-      </a>
+      <span class="copyright">
+        Copyright © <%= config.title %> 2018
+      </span>
       <nav class="footer-nav nav-links">
         <% for (var i in theme.menu){ %>
             <a class="footer-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
         <% } %>
       </nav>
     </div>
-    <div class="copyright-footer">
-      Copyright © <%= config.title %> 2017 | Powered By Hexo | Theme - 
-      <a href="https://github.com/clarkzsd/hexo-theme-impromptu">Impromptu</a>
+    <div class="credits-footer">
+      <span class="credit-theme">
+         Theme - 
+        <a href="https://github.com/clarkzsd/hexo-theme-impromptu">Impromptu</a> By <a href="https://github.com/clarkzsd">Sytone</a>
+      </span>
+      <span class="credit-platform">
+          Published with Hexo
+      </span>
     </div>
 </footer>
