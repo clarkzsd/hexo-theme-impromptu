@@ -11,3 +11,18 @@
         <% } %>
     </nav>
 </header>
+
+<script>
+    var classNameList;
+    var headerBarBtn = document.getElementsByClassName('header-bar-btn')[0];
+    var headerNav = document.getElementsByClassName('header-nav')[0];
+    headerBarBtn.addEventListener('click', () => {
+        classNameList = headerNav.className.split(' ');
+        console.log(classNameList.length);
+        if(classNameList.length === 2) {
+            headerNav.className += ' nav-expand';
+        } else {
+            headerNav.className = 'header-nav nav-links';
+        }
+    }, false);
+</script>

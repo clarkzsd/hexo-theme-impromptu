@@ -131,6 +131,9 @@ header.blog-header {
       color: var(--midgrey);
     }
   }
+  .nav-expand {
+    display: block;
+  }
 }
 /* ---------------------------------------------------------- */
 
