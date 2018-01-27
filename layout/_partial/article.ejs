@@ -6,7 +6,7 @@
         <span>
             <%= post.date.format(config.date_format) %>
         </span>
-        <% if(page.tags.length > 0) { %>
+        <% if(post.tags && post.tags.length > 0) { %>
             <span class="meta-divider">/</span>
             <span>
                 <% page.tags.forEach(function (tag) { %>
