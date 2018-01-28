@@ -225,10 +225,9 @@ header.blog-header {
 .post-list {
   display: flex;
   flex-flow: row wrap;
-}
-
-.post-item {
-  width: 50%;
+  & .post-item {
+    width: 50%;
+  }
 }
 
 .post-item:hover {
