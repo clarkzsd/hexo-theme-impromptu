@@ -1,20 +1,32 @@
-<header class="post-header">
-    <h1 class="post-title">
-        <%= post.title %>
-    </h1>
-    <p class="post-meta">
-        <span>
-            <%= post.date.format(config.date_format) %>
-        </span>
-        <% if(post.tags && post.tags.length > 0) { %>
-            <span class="meta-divider">/</span>
-            <span>
-                <% page.tags.forEach(function (tag) { %>
-                    <a class="tag" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
-                <% }) %>
-            </span>
-        <% } %>
-    </p>
+<header class="post-header outer <%= post.image ? 'has-cover' : '' %>">
+    <div class="inner">
+        <div class="blog-logo-wrapper">
+            <a href="/" class="blog-logo">
+                <%= config.title %>
+            </a>
+        </div>
+        <div class="post-header-content">
+            <h1 class="post-title">
+                <%= post.title %>
+            </h1>
+            <p class="post-meta">
+                <span>
+                    <%= post.date.format(config.date_format) %>
+                </span>
+                <% if(post.tags && post.tags.length > 0) { %>
+                    <span class="meta-divider">/</span>
+                    <span>
+                        <% page.tags.forEach(function (tag) { %>
+                            <a class="tag" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
+                        <% }) %>
+                    </span>
+                <% } %>
+            </p>
+            <% if(post.image) { %>
+                <div class="post-cover" style="background-image: url(<%= post.image %>); transform: translate3d(0px, 0px, 0px);"></div>
+            <% } %>
+        </div>
+    </div>
 </header>
 
 <article class="post outer">

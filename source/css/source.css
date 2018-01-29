@@ -94,14 +94,17 @@ h2 {
 /* ---------------------------------------------------------- */
 
 /* partial: blog header */
+.blog-logo {
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
 header.blog-header {
   padding-top: 60px;
   padding-bottom: 60px;
   overflow: hidden;
   & .blog-logo {
     float: left;
-    font-size: 1.5em;
-    font-weight: 900;
   }
 }
 
@@ -220,6 +223,9 @@ header.blog-header {
     margin: 0;
     margin: 1.5em 0 0.5em;
   }
+  & .post-title {
+    color: color(var(--midgrey) l(-25%));
+  }
 }
 
 .post-list {
@@ -262,22 +268,18 @@ header.blog-header {
 
 /* page: post page */
 .post-header {
-  margin: 0 auto;
-  padding: 6vw 3vw 3vw;
-  max-width: 1040px;
-  text-align: center;
-}
-
-@media (max-width: 500px) {
-  .post-header {
-    padding: 14vw 3vw 10vw;
+  padding-top: 6em;
+  position: relative;
+  & .post-title {
+    margin: 0;
+  }
+  & .blog-logo-wrapper {
+    position: absolute;
+    top: 2rem;
   }
 }
 
 .post-meta {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: var(--midgrey);
   font-size: 1.4rem;
   font-weight: 600;
@@ -289,30 +291,48 @@ header.blog-header {
   }
 }
 
-.post-title {
-  margin: 0;
-  color: color(var(--darkgrey) l(-5%));
+.post-header-content {
+  padding: 0 100px;
 }
-
-.post-image {
-  margin: 0 -10vw -165px;
-  height: 800px;
-  background: var(--lightgrey) center center;
-  background-size: cover;
-  border-radius: 5px;
-}
-
 @media (max-width: 1170px) {
-  .post-image {
-    margin: 0 -4vw -100px;
-    height: 600px;
-    border-radius: 0;
+  .post-header-content {
+    padding: 0 7vw;
+  }
+}
+@media (max-width: 500px) {
+  .post-header-content {
+    padding: 0;
   }
 }
 
-@media (max-width: 800px) {
-  .post-image {
-    height: 400px;
+@keyframes fadein {
+	0% {
+    opacity: .2;
+	}
+	100% {
+		opacity: .9;
+	}
+}
+
+.post-cover {
+  position: absolute;
+	width: 100%;
+	height: 100%;
+  left: 0;
+	top: 0;
+  z-index: -1;
+  background: no-repeat scroll center center / cover var(--lightblack);
+	animation: 0.5s ease-in forwards fadein;
+}
+
+.has-cover {
+  padding-top: 16em;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  overflow: hidden;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  & .post-title, & .post-meta * {
+    color: var(--whitegrey);
   }
 }
 
@@ -324,45 +344,15 @@ header.blog-header {
   line-height: 1.6em;
   font-family: Georgia, serif;
 }
-
 @media (max-width: 1170px) {
   .post-content {
     padding: 5vw 7vw;
   }
 }
-
 @media (max-width: 800px) {
   .post-content {
     font-size: 1.9rem;
   }
-}
-
-.post-content:before {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: -5px;
-  z-index: -1;
-  display: block;
-  width: 20px;
-  height: 200px;
-  background: rgba(39, 44, 49, 0.15);
-  filter: blur(5px);
-  transform: rotate(-5deg);
-}
-
-.post-content:after {
-  content: "";
-  position: absolute;
-  top: 15px;
-  right: -5px;
-  z-index: -1;
-  display: block;
-  width: 20px;
-  height: 200px;
-  background: rgba(39, 44, 49, 0.15);
-  filter: blur(5px);
-  transform: rotate(5deg);
 }
 
 .post-content h1,
