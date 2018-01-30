@@ -236,14 +236,14 @@ header.blog-header {
   }
 }
 
-.post-item:hover {
-  background-color: var(--whitegrey);
-}
-
 @media (max-width: 800px) {
   .post-item {
     width: 100%;
   }
+}
+
+.post-item:hover {
+  background-color: var(--whitegrey);
 }
 /* ---------------------------------------------------------- */
 
@@ -251,6 +251,9 @@ header.blog-header {
 .archive-block {
   margin: 0 auto;
   padding: 70px 100px;
+  & > h1 {
+    padding: 0 4vw;
+  }
 }
 
 @media (max-width: 1170px) {

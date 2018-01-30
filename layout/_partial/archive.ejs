@@ -1,0 +1,15 @@
+<div class="archive">
+  <div class="inner">
+    <section class="archive-block">
+      <% if(is_tag()) { %>
+        <h1><i class="fa fa-tag" aria-hidden="true"></i> Tag: <%= page.tag %></h1>
+      <% } else if(type == 'archive') { %>
+        <h1><i class="fa fa-archive" aria-hidden="true"></i> Archive</h1>
+      <% } %>
+      <% page.posts.each(function(post) { %>
+        <%- partial('_partial/post-item', { post }) %>
+      <% }) %>
+      <%- partial('_partial/pager', { page }) %>
+    </section>
+  </div>
+</div>
