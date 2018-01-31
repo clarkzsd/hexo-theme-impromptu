@@ -43,8 +43,8 @@ h2 {
   color: var(--midgrey);
 }
 
-.container {
-  padding-bottom: 40px;
+.site-main {
+  padding-bottom: 4vw;
 }
 
 .nav-links {

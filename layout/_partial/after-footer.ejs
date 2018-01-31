@@ -1,0 +1,27 @@
+<% if (theme.disqus_shortname && !is_home() && !is_archive()) { %>
+  <script>
+   var disqus_shortname = '<%= theme.disqus_shortname %>';
+   (function(){
+     var s = document.createElement('script');
+     s.src = 'https://' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>';
+     s.setAttribute('data-timestamp', +new Date());
+     (document.body || document.head).appendChild(s);
+   })();
+  </script>
+<% } %>
+
+<% if (theme.gitment.owner && theme.gitment.repo && theme.gitment.client.id && theme.gitment.client.secret && !is_home() && !is_archive()) { %>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+  var gitment = new Gitment({
+    owner: '<%= theme.gitment.owner %>',
+    repo: '<%= theme.gitment.repo %>',
+    oauth: {
+      client_id: '<%= theme.gitment.client.id %>',
+      client_secret: '<%= theme.gitment.client.secret %>'
+    }
+  })
+  gitment.render('gitment_container')
+</script>
+<% } %>

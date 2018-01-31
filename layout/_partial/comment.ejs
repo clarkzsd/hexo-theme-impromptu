@@ -1,0 +1,11 @@
+<section class="post-comment">
+  <% if (theme.disqus_shortname){ %>
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+<% } %>
+
+<% if (theme.gitment.owner && theme.gitment.repo && theme.gitment.client.id && theme.gitment.client.secret){ %>
+  <div id="gitment_container"></div>
+<% } %>
+</section>

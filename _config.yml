@@ -15,3 +15,14 @@ favicon: /favicon.png
 
 # Author avatar
 avatar: /avatar.png
+
+# disqus
+disqus_shortname: 
+
+# Gitment
+gitment:
+  owner:
+  repo:
+  client:
+    id:
+    secret:
