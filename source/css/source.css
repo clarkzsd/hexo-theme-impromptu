@@ -1,29 +1,15 @@
 @import "./global.css";
 
-/* Custom base */
-:root {
-  --link-base: {
-    color: var(--midgrey);
-    text-decoration: none;
-    transition: color 250ms linear;
-    cursor: pointer;
-  }
-  --footer-base: {
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
-    border-top: 1px solid var(--lightgrey);
-    padding: 20px;
-  }
-}
-
 body {
   font-family: Roboto, Helvetica Neue, Helvetica, Aria, PingFang SC,
     Hiragino Sans GB, Droid Sans Fallback, Microsoft YaHei, sans-serif;
 }
 
 a {
-  @apply --link-base;
+  color: var(--midgrey);
+  text-decoration: none;
+  transition: color 250ms linear;
+  cursor: pointer;
 }
 
 h1,
@@ -45,6 +31,14 @@ h2 {
 
 .site-main {
   padding-bottom: 4vw;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  border-top: 1px solid var(--lightgrey);
+  padding: 20px;
 }
 
 .nav-links {
@@ -155,13 +149,11 @@ header.blog-header {
 
 /* partial: blog footer */
 .blog-footer {
-  @apply --footer-base;
   font-weight: 600;
   color: var(--midgrey);
 }
 
 .credits-footer {
-  @apply --footer-base;
   color: var(--midgrey);
   font-size: 14px;
   & .credit-platform {
