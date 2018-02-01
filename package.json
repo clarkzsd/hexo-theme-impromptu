@@ -4,6 +4,7 @@
   "scripts": {
     "watch-css": "postcss source/css/source.css -w -c postcss.config.js --output source/css/main.css",
     "server": "cd ../../ && hexo server",
+    "build": "postcss source/css/source.css -c postcss.config.js --output source/css/main.css",
     "start": "parallelshell 'npm run watch-css' 'npm run server'"
   },
   "keywords": [
