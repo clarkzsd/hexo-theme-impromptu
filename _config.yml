@@ -1,28 +1,36 @@
-# Header
+# Header：
+# Navigation menu
 menu:
   Home: /
   About: /about
   Archives: /archives
 
+# Social links:
+# Will be displayed as icons in the profile area
 social:
   twitter: https://twitter.com/
   github: https://github.com/
   instagram: https://twitter.com/
   weibo: https://weibo.com/
 
-# Site favicon
-favicon: /favicon.ico
+# Keyword for SEO
+keyword: Sytone's Blog
 
-# Author avatar
-avatar: /avatar.png
+# favicon filename(path: ./source/img/)
+favicon: favicon.ico
 
-# Bio
+# Author profile
+author: Sytone
+# avatar filename(path: ./source/img/)
+avatar: avatar.png
 bio: VENI VIDI VICI.
 
-# disqus
+# Disqus:
+# Your disqus shortname to enable disqus
 disqus_shortname: 
 
-# Gitment
+# Gitment:
+# Your gitment related options to enable gitment
 gitment:
   owner:
   repo:
