@@ -1,16 +1,15 @@
 <%- partial('_partial/header') %>
 <div class="author-info outer">
     <div class="inner">
-    
         <a href="/" class="info-avatar">
             <img src="<%= config.root %>img/<%= theme.avatar %>" alt="">
         </a>
         <div class="info-content">
             <h1 class="author-name">
-                Sytone
+                <%= config.author %>
             </h1>
             <h2 class="author-bio">
-                Web DeveloperWebWeb DeveloperWebWeb DeveloperWeb
+                <%= theme.bio || config.description %>
             </h2>
             <div class="author-social">
                 <% for (var key in theme.social) { %>
