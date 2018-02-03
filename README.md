@@ -23,6 +23,8 @@ theme: impromptu
 
 ## Configuration
 
+### Theme configuration
+
 `themes/improptu/_config.yml`
 
 ```yaml
@@ -67,9 +69,29 @@ gitment:
     secret:
 ```
 
-### Note：
+**Note:** 
 
-* Put your favicon and avatar in `themes/impromptu/img/`
+* Put your favicon and avatar in `themes/impromptu/source/img/`
+
+### Post configuration
+
+``` markdown
+---
+title: 
+date: 
+tags: 
+categories: 
+description: 
+image:
+---
+
+...
+```
+
+* `description`: The description blow the post title. Word limit: 120 words.
+* `image`: The url of image. Will be displayed as a cover image of the post. Preview:
+
+![preview-post](./preview/preview-post.png)
 
 ## Update
 
